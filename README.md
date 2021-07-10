@@ -1,4 +1,4 @@
-# js-ui简介
+# melonUI简介
 
 使用go语言打包的，基于chrome的桌面app应用框架，类似electron，使用html5开发桌面应用，框架已经编译好了，直接可用于生产环境。
 
