@@ -6,4 +6,4 @@
 
 
 # 使用说明：
-下载压缩包jsui.zip，解压，把做好html项目放入lib文件夹中，将主页文件名修改为main.html，执行jsui.exe即可启动程序。
+下载压缩包jsui2.1.zip，解压，把做好html项目放入lib文件夹中，将主页文件名修改为main.html，执行jsui.exe即可启动程序。
