@@ -14,3 +14,22 @@
 2. 目录中存在jsgo.exe文件，将会自动启动jsgo，否则，以普通模式启动。
 3. 普通模式，只支持静态页面，静态目录为dist，首页为index.html，将web项目直接拷贝到该目录即可。
 4. jsgo模式，内置丰富的接口函数，可混合编写js和go代码，并可编译为so文件。
+
+```
+//jsgo模式app.js范例
+function main(){
+	let path=ctx.Request.URL.Path;
+	if(path=="/"){
+		ctx.Header("Cache-Control", "no-cache");
+		// ctx.File("dist/index.html");
+		ctx.Header("Content-Type", "text/html");
+		// return "<script>location.href='http://www.baidu.com/';</script>";
+		return "jsgo.ok";
+	}else if(path=="/item"){
+		return api.import("item.js")(6);
+	}else if(path=="/files"){
+		return api.import("files.js")(".");
+	}
+	return "none";
+}
+```
