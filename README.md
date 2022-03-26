@@ -26,7 +26,7 @@ function main(){
 		// return "<script>location.href='http://www.baidu.com/';</script>";
 		return "jsgo.ok";
 	}else if(path=="/item"){
-		return api.import("item.js")(6);
+		return api.import("item.js")();
 	}else if(path=="/files"){
 		return api.getList(".").map(x=>x.Name());
 	}
