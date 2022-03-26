@@ -28,7 +28,7 @@ function main(){
 	}else if(path=="/item"){
 		return api.import("item.js")(6);
 	}else if(path=="/files"){
-		return api.import("files.js")(".");
+		return api.getList(".").map(x=>x.Name());
 	}
 	return "none";
 }
